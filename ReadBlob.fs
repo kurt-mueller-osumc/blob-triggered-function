@@ -21,7 +21,9 @@ module ReadBlob =
             = new StreamReader(myBlob)
 
         let blobContent
-            = blobStreamReader.ReadToEndAsync() |> Async.AwaitTask
+            = blobStreamReader.ReadToEndAsync()
+            |> Async.AwaitTask
+            |> Async.RunSynchronously
 
         let msg =
             sprintf "F# Blob trigger function Processed blob\nName: %s \n Data: %s" name blobContent
