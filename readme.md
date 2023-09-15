@@ -13,5 +13,5 @@ az storage container create -n samples-workitems --connection-string "DefaultEnd
 Upload a blob to the `samples-workitems` container:
 
 ```bash
-
+az storage blob upload -f foobar.json -c samples-workitems -n foobar.json --connection-string "DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://127.0.0.1:10000/devstoreaccount1;QueueEndpoint=http://127.0.0.1:10001/devstoreaccount1;TableEndpoint=http://127.0.0.1:10002/devstoreaccount1;"
 ```
